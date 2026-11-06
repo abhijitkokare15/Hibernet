@@ -1,8 +1,8 @@
 package com.hibernert.Hibernet_intro;
 
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Anime {
@@ -15,9 +15,18 @@ public class Anime {
 	
 	private Anime_relase Release_date;
 	
+	@ManyToOne
+	private Audeince audience;
 	
 	
 	
+	
+	public Audeince getAudience() {
+		return audience;
+	}
+	public void setAudience(Audeince audience) {
+		this.audience = audience;
+	}
 	public Anime_relase getRelease_date() {
 		return Release_date;
 	}

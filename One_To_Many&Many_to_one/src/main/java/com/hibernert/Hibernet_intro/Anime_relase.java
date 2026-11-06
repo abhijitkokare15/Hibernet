@@ -9,6 +9,10 @@ public class Anime_relase {
 	private String month;
 	private int year;
 	
+	
+	
+	
+	
 	public int getDate() {
 		return date;
 	}
@@ -26,6 +30,10 @@ public class Anime_relase {
 	}
 	public void setYear(int year) {
 		this.year = year;
+	}
+	@Override
+	public String toString() {
+		return "Anime_relase [date=" + date + ", month=" + month + ", year=" + year + "]";
 	}
 	
 

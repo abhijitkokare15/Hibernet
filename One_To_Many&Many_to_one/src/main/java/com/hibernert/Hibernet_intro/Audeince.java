@@ -1,8 +1,11 @@
 package com.hibernert.Hibernet_intro;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.OneToMany;
 
 @Entity
 
@@ -11,8 +14,10 @@ public class Audeince {
   private  int aude_id;
   private String name;
   private String date;
-  @OneToOne
-  private Anime anime;
+  @OneToMany(mappedBy = "audience")
+  private List<Anime> mylist  = new ArrayList<Anime>();
+  
+  
 public int getAude_id() {
 	return aude_id;
 }
@@ -21,6 +26,12 @@ public void setAude_id(int aude_id) {
 }
 public String getName() {
 	return name;
+}
+public List<Anime> getMylist() {
+	return mylist;
+}
+public void setMylist(List<Anime> mylist) {
+	this.mylist = mylist;
 }
 public void setName(String name) {
 	this.name = name;
@@ -31,17 +42,10 @@ public String getDate() {
 public void setDate(String date) {
 	this.date = date;
 }
-public Anime getAnime() {
-	return anime;
-}
-public void setAnime(Anime anime) {
-	this.anime = anime;
-}
 @Override
 public String toString() {
-	return "Audeince [aude_id=" + aude_id + ", name=" + name + ", date=" + date + ", anime=" + anime + "]";
-}
-  
+	return "Audeince [aude_id=" + aude_id + ", name=" + name + ", date=" + date + ", mylist=" + mylist + "]";
+} 
   
   
   
