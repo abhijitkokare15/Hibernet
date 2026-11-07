@@ -40,3 +40,10 @@ public class Anime_Publice {
         sf.close();
     }
 }
+
+//Method	Purpose
+//update()	Reattach a detached object to the Session (legacy API).
+//delete()	Delete an object (legacy API).
+//merge()	Copy detached object's data into a managed object.
+//remove()	Mark a managed object for deletion.
+//persist()	Make a new object persistent.

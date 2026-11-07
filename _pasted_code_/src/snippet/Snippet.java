@@ -4,5 +4,59 @@ public class Snippet {
 	public static void main(String[] args) {
 		 s1.get(Anime.class);
 	}
+
+	```xml
+	<?xml version="1.0" encoding="UTF-8"?>
+	
+	<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+	             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+	             https://jakarta.ee/xml/ns/persistence/persistence_3_1.xsd"
+	             version="3.1">
+	
+	    <persistence-unit name="myPersistenceUnit">
+	
+	        <!-- Hibernate as JPA Provider -->
+	        <provider>
+	            org.hibernate.jpa.HibernatePersistenceProvider
+	        </provider>
+	
+	        <!-- Entity Class -->
+	        <class>com.example.Student</class>
+	
+	        <properties>
+	
+	            <!-- Database Driver -->
+	            <property name="jakarta.persistence.jdbc.driver"
+	                      value="com.mysql.cj.jdbc.Driver"/>
+	
+	            <!-- Database URL -->
+	            <property name="jakarta.persistence.jdbc.url"
+	                      value="jdbc:mysql://localhost:3306/college_db"/>
+	
+	            <!-- Database Username -->
+	            <property name="jakarta.persistence.jdbc.user"
+	                      value="root"/>
+	
+	            <!-- Database Password -->
+	            <property name="jakarta.persistence.jdbc.password"
+	                      value=""/>
+	
+	            <!-- Hibernate Properties -->
+	            <property name="hibernate.show_sql"
+	                      value="true"/>
+	
+	            <property name="hibernate.format_sql"
+	                      value="true"/>
+	
+	            <property name="hibernate.hbm2ddl.auto"
+	                      value="update"/>
+	
+	        </properties>
+	
+	    </persistence-unit>
+	
+	</persistence>
+	```
 }
 
